@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#217E9D</color>
+    <color name="colorAccent">#448AFF</color>
+    <color name="lightGray">#6A6C70</color>
+    <color name="image_item_card_background">#474A51</color>
+    <color name="bottombar_item_background">#474A51</color>
+    <color name="image_list_activity_background">#202023</color>
+    <color name="image_item_points_text_color">#B4B9C2</color>
+</resources>

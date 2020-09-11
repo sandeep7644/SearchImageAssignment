@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="user_avatar_width">50dp</dimen>
+    <dimen name="user_avatar_height">50dp</dimen>
+    <dimen name="recyclerViewItemPadding">15dp</dimen>
+    <dimen name="usernameMarginLeft">15dp</dimen>
+    <dimen name="likesCountMarginTop">20dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="divider_top_margin">10dp</dimen>
+    <dimen name="toolbar_height">58dp</dimen>
+    <dimen name="userCityTextSize">10sp</dimen>
+    <dimen name="user_detail_avatar_width">150dp</dimen>
+    <dimen name="user_detail_avatar_height">150dp</dimen>
+    <dimen name="user_detail_avtar_margin_top">30dp</dimen>
+    <dimen name="user_detail_name_text_size">18sp</dimen>
+    <dimen name="user_detail_designation_text_size">15sp</dimen>
+    <dimen name="user_detail_city_text_size">15sp</dimen>
+    <dimen name="user_detail_about_text_size">15sp</dimen>
+    <dimen name="user_detail_about_leftmargin">16dp</dimen>
+    <dimen name="user_detail_about_rightmargin">16dp</dimen>
+    <dimen name="user_detail_about_topmargin">32dp</dimen>
+    <dimen name="error_text_size">20sp</dimen>
+    <dimen name="user_detailabout_padding">30dp</dimen>
+    <dimen name="user_detail_designation_margin_top">12dp</dimen>
+    <dimen name="user_detail_city_margin_top">12sp</dimen>
+    <dimen name="image_item_card_corner_radius">3dp</dimen>
+    <dimen name="image_image_height">180dp</dimen>
+    <dimen name="image_item_card_elevation">3dp</dimen>
+    <dimen name="image_item_card_margin">3dp</dimen>
+    <dimen name="image_item_title_margin">5dp</dimen>
+    <dimen name="image_item_points_padding">10dp</dimen>
+    <dimen name="image_item_points_drawable_padding">5dp</dimen>
+    <dimen name="image_item_points_margin">10dp</dimen>
+
+</resources>

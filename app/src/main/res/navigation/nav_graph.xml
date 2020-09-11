@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageListFragment">
+
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.example.assignment.features.main.MemeListFragment"
+        android:label="MemeListFragment" />
+    <fragment
+        android:id="@+id/mainFrragment1"
+        android:name="com.example.activityfragmentlifecycle.MainFrragment1"
+        android:label="MainFrragment1" />
+    <fragment
+        android:id="@+id/mainFrragment2"
+        android:name="com.example.activityfragmentlifecycle.MainFrragment2"
+        android:label="MainFrragment2" />
+    <fragment
+        android:id="@+id/mainFrragment3"
+        android:name="com.example.activityfragmentlifecycle.MainFrragment3"
+        android:label="MainFrragment3" />
+    <fragment
+        android:id="@+id/mainFrragment4"
+        android:name="com.example.activityfragmentlifecycle.MainFrragment4"
+        android:label="MainFrragment4" />
+
+</navigation>
