@@ -86,7 +86,7 @@ class ImageListActivity : AppCompatActivity() {
     }
 
 
-    private fun showToast(string: String) {
+    private fun showToast(string: String?) {
         Toast.makeText(this, string, Toast.LENGTH_LONG).show()
     }
 
@@ -126,6 +126,7 @@ class ImageListActivity : AppCompatActivity() {
             searchJob?.cancel()
             searchJob = lifecycleScope.launch {
                 if (debounce)
+//                    debouncing for 600 milliseconds to avoid frequent search requests
                     delay(600)
                 sharedPreferences?.edit()?.putString(LAST_QUERY, searchQueryString)?.apply()
                 toolbar.title = searchQueryString
@@ -148,7 +149,7 @@ class ImageListActivity : AppCompatActivity() {
 
     companion object {
         const val LAST_QUERY = "last_search_query"
-        const val DEFAULT_SEARCH_QUERY = "Randome images"
+        const val DEFAULT_SEARCH_QUERY = "Random images"
     }
 
 

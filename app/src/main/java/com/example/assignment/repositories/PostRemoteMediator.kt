@@ -5,6 +5,7 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import com.example.assignment.api.ApiService
+import com.example.assignment.error_handling.EmptyListException
 import com.example.assignment.models.ImageItem
 import com.example.assignment.persistence.ImageDao
 import com.example.assignment.models.ImageRemotePageKeys
@@ -21,7 +22,7 @@ class PostRemoteMediator(
     val apiService: ApiService,
     val imageDao: ImageDao,
     val imageRemotePageKeysDao: ImageRemotePageKeysDao,
-    val searchQuery : String
+    val searchQuery: String
 ) : RemoteMediator<Int, ImageItem>() {
     override suspend fun load(
         loadType: LoadType,
@@ -63,8 +64,11 @@ class PostRemoteMediator(
         try {
             val imagesResponse = apiService.fetchImages(page.toString(), searchQuery)
             if (imagesResponse.success) {
-                val imagesList = imagesResponse.data;
+                val imagesList = imagesResponse.data
                 val endOfPaginationReached = imagesList.isEmpty()
+                if (page == 1 && endOfPaginationReached) {
+                    return MediatorResult.Error(EmptyListException("No data found"))
+                }
                 // clear all tables in the database
                 if (loadType == LoadType.REFRESH) {
                     imageRemotePageKeysDao.clearRemoteKeys()
@@ -82,7 +86,7 @@ class PostRemoteMediator(
                 imageRemotePageKeysDao.insertAll(keys)
                 imageDao.insertImageList(imagesList.map {
                     var imageUrl = ""
-                    if(it.images?.get(0)?.type.equals("image/jpeg")){
+                    if (it.images?.get(0)?.type.equals("image/jpeg")) {
                         imageUrl = it.images?.get(0)?.link.toString()
                     }
                     it.link = imageUrl

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import com.example.assignment.R
+import com.example.assignment.error_handling.EmptyListException
 import kotlinx.android.synthetic.main.toolbar_home.*
 import retrofit2.HttpException
 
@@ -20,6 +21,7 @@ fun Throwable.getExceptionString() = when (this) {
 
         }
     }
+    is EmptyListException -> this.message
     else -> "An Error Occurred"
 
 
